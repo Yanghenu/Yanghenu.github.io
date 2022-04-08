@@ -144,6 +144,9 @@ Fonts - Google Fonts
 /*timer*/
 timer = setInterval(function () {
   var date = new Date();
+  var year = date.getFullYear();
+  var month = date.getMonth() + 1;
+  var day = date.getDate();
   var hours = date.getHours();
   var minutes = date.getMinutes();
   var seconds = date.getSeconds();
@@ -152,7 +155,7 @@ timer = setInterval(function () {
   hours = hours ? hours : 12; // the hour '0' should be '12'
   minutes = minutes < 10 ? "0" + minutes : minutes;
   seconds = seconds < 10 ? "0" + seconds : seconds;
-  var strTime = hours + " : " + minutes + " : " + seconds + " " + ampm;
+  var strTime = month + "/" + day + "/" + year + " " + hours + " : " + minutes + " : " + seconds + " " + ampm;
   document.getElementById("clock").innerHTML = strTime;
 }
 , 1000);

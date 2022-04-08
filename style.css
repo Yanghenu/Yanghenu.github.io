@@ -577,3 +577,15 @@ a span:nth-child(4){
   background-color: #1d2630;
   border-radius: 50%;
 }
+
+/*Timer*/
+.timer-style{
+  position: absolute;
+  bottom: 10%;
+  right: 0%;
+  width: 600px;
+  height: 400px;
+  font-size: 30px;
+  font-family: "Josefin Sans", sans-serif;
+  color: rgb(0, 254, 241);
+}

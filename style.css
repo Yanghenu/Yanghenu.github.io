@@ -588,4 +588,6 @@ a span:nth-child(4){
   font-size: 30px;
   font-family: "Josefin Sans", sans-serif;
   color: rgb(0, 254, 241);
+	
+  text-shadow: 0 0 20px rgba(0, 254, 241),  0 0 20px rgba(10, 175, 230, 0);/*shadow字体光晕*/
 }

@@ -155,7 +155,7 @@ timer = setInterval(function () {
   hours = hours ? hours : 12; // the hour '0' should be '12'
   minutes = minutes < 10 ? "0" + minutes : minutes;
   seconds = seconds < 10 ? "0" + seconds : seconds;
-  var strTime = month + "/" + day + "/" + year + " " + hours + " : " + minutes + " : " + seconds + " " + ampm;
+  var strTime =  hours + " : " + minutes + " : " + seconds + " " + ampm + " " + month + "/" + day + "/" + year;
   document.getElementById("clock").innerHTML = strTime;
 }
 , 1000);

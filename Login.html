@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="./LoginStyle.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="video-bg">
+  <video width="320" height="240" autoplay loop muted>
+   <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
+ Your browser does not support the video tag.
+ </video>
+</div>
+<div class="login-box">
+  <h2>Login</h2>
+  <form>
+    <div class="user-box">
+      <input type="text" id="account" required="required">
+      <label>Username</label>
+    </div>
+    <div class="user-box">
+      <input type="password" id="code" required="required">
+      <label>Password</label>
+      
+    </div>
+    <a href="https://yanghenu.github.io/index.html">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Submit
+    </a>
+  </form>
+</div>
+<!-- partial -->
+  
+<script>
+  onload = function() {
+  var submit=document.getElementsByTagName("a")[0];
+  submit.onclick=function(){
+    var account =document.getElementById("account").value;
+    var code = document.getElementById("code").value;
+    //判断账号和密码为空
+    if(account==""||code==""){
+      alert("账号或密码不能为空");
+      return false;
+    }
+    else
+    {
+      //判断账号和密码是否正确
+      if(account=="user"&&code=="user"){
+        return true;
+      }
+      else{
+        //清空账号和密码
+        document.getElementById("account").value="";
+        document.getElementById("code").value="";
+        //提示错误信息
+        alert("账号或密码错误");
+        //阻止表单提交
+        return false;
+      }
+    }
+    
+  }
+}
+</script>
+</body>
+</html>
